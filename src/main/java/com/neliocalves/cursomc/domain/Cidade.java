@@ -9,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 /**
  * Molte citta appartengono ad 1 stato
  * @author roberto
@@ -32,6 +34,7 @@ public class Cidade implements Serializable
 	 * cidade: lato *
 	 */
 	// IoC
+	@JsonManagedReference
 	@ManyToOne
 	@JoinColumn(name="estado_id")
 	private Estado estado;

@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 /**
  * 1 stato ha molte citta
  * @author roberto
@@ -35,6 +37,7 @@ public class Estado implements Serializable
 	 * definire in Estado una :: 
 	 * List<Cidade> cidades = new ArrayList<>();
 	 */
+	@JsonBackReference
 	@OneToMany(mappedBy="estado")
 	private List<Cidade> cidades = new ArrayList<>();
 	
