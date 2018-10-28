@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 /**
  * Categoria 1..* --- a --- * Produto
  * Nella Categoria, definisco una :: 
@@ -54,6 +56,7 @@ public class Produto implements Serializable {
 	 * @author roberto
 	 *
 	 */
+	@JsonBackReference
 	@ManyToMany
 	@JoinTable( name="PRODUTO_CATEGORIA",
 		joinColumns = @JoinColumn(name="produto_id"),
