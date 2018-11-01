@@ -16,6 +16,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
@@ -35,7 +36,7 @@ public class Pedido implements Serializable {
 	 * pedido 		lato 1
 	 * Pagamento 	lato 1
 	 */
-	@JsonManagedReference
+//	@JsonManagedReference: da commentare senza implementare @JsonIgnore
 	@OneToOne(cascade=CascadeType.ALL, mappedBy="pedido")
 	private Pagamento pagamento;
 	
