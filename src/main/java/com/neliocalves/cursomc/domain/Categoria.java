@@ -15,11 +15,7 @@ import javax.persistence.ManyToMany;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
-public class Categoria implements Serializable{
-	
-	/**
-	 * serial number  
-	 */
+public class Categoria implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	/**
