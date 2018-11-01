@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.neliocalves.cursomc.domain.Cliente;
 import com.neliocalves.cursomc.repositories.ClienteRepository;
+import com.neliocalves.cursomc.resources.exception.ObjectNotFoundException;
 
 @Service
 public class ClienteService 

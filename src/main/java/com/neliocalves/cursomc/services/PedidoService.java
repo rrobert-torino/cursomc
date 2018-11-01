@@ -3,26 +3,26 @@ package com.neliocalves.cursomc.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.neliocalves.cursomc.domain.Categoria;
-import com.neliocalves.cursomc.repositories.CategoriaRepository;
+import com.neliocalves.cursomc.domain.Pedido;
+import com.neliocalves.cursomc.repositories.PedidoRepository;
 import com.neliocalves.cursomc.resources.exception.ObjectNotFoundException;
 
 @Service
-public class CategoriaService 
+public class PedidoService 
 {
 	
 	/** definiamo dipendenza injection o
 	 * 		inversion of control
 	 */
 	@Autowired
-	private CategoriaRepository repo;
+	private PedidoRepository repo;
 	
 	
-	public Categoria buscar(Integer id) {
-		Categoria obj = repo.findOne(id);
+	public Pedido buscar(Integer id) {
+		Pedido obj = repo.findOne(id);
 		
 		if(obj == null) {
-			throw new ObjectNotFoundException("Object nao encontrado! Id: " + id + ", Tipo: "  + Categoria.class.getName()); 
+			throw new ObjectNotFoundException("Object nao encontrado! Id: " + id + ", Tipo: "  + Pedido.class.getName()); 
 		}
 		return obj;
 	}
